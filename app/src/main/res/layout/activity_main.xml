@@ -12,11 +12,14 @@
         android:id="@+id/cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:hint="Cost Of Service"
         android:inputType="number"
         android:minHeight="48dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/service"
@@ -24,7 +27,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cost"
-        android:text="How was the service?"/>
+        android:text="@string/how_was_the_service"/>
     
     <RadioGroup
         android:id="@+id/tips"
@@ -37,19 +40,19 @@
 
         <RadioButton
             android:id="@+id/twenty"
-            android:text="Amazing (20%)"
+            android:text="@string/amazing_20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
             android:id="@+id/eighteen"
-            android:text="Good (18%)"
+            android:text="@string/good_18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
             android:id="@+id/fifteen"
-            android:text="OK (15%)"
+            android:text="@string/ok_15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -61,23 +64,25 @@
         android:layout_height="wrap_content"
         android:checked="true"
         android:minHeight="48dp"
-        android:text="Round up tip?"
+        android:text="@string/round_up_tip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tips"
-        app:layout_constraintTop_toBottomOf="@+id/tips" />
+        app:layout_constraintTop_toBottomOf="@+id/tips"
+        tools:ignore="UseSwitchCompatOrMaterialXml,VisualLintButtonSize" />
 
     <Button
         android:id="@+id/calcu"
-        android:text="Calculate"
+        android:text="@string/calculate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/round"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        tools:ignore="VisualLintButtonSize" />
 
     <TextView
         android:id="@+id/result"
-        android:text="Tip amount: "
+        android:text="@string/tip_amount"
         app:layout_constraintTop_toBottomOf="@id/calcu"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"

@@ -1,7 +1,6 @@
 package com.example.tipcalculator
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -35,11 +34,11 @@ class MainActivity : AppCompatActivity() {
             else -> 0.15
         }
         var tip = cost*tipPercentage
-        var roundUp = binding.round.isChecked
+        val roundUp = binding.round.isChecked
         if (roundUp) {
             tip = ceil(tip)
         }
-        var currencyTip = NumberFormat.getCurrencyInstance().format(tip)
+        val currencyTip = NumberFormat.getCurrencyInstance().format(tip)
         binding.result.text = currencyTip
     }
 }
